@@ -18,6 +18,10 @@ body {
     height: 95%;
 }
 
+.icon:hover{
+    cursor: pointer;
+}
+
 .inner-container-header{
     display: flex;
     justify-content: space-between;
