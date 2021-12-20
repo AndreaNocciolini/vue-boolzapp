@@ -31,6 +31,7 @@ body {
     width: 100%;
     height: 10%;
     background-color: #d7dad6;
+    padding: 0.5em;
 }
 
 /* Inner Container SX */
@@ -41,10 +42,41 @@ body {
     border-right: 1px solid #bfbfbf;
 }
 
-.alert {
+.user-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.user-container img {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.8em;
+    width: 20%;
+    font-size: 1.2em;
+}
+
+.alert-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
     height: 10%;
-    background-color: turquoise;
+    color: white;
+    background-color: #8edafc;
+}
+
+.alert-icon{
+    border-radius: 50%;
+    padding: 0.6em;
+    color: #8edafc;
+    background-color: white;
 }
 
 .search {
@@ -74,10 +106,11 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #bfbfbf;
+    padding: 0.5em;
 }
 
 .contacts-container img {
-    width: 20%;
+    width: 15%;
     border-radius: 50%;
 }
 
