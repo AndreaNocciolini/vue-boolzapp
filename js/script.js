@@ -92,6 +92,6 @@ const app = new Vue(
                   ],
                 },
               ]
-        }
+        },
     }
 )

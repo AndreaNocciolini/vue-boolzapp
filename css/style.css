@@ -70,4 +70,15 @@ body {
     outline: none;
 }
 
+.contacts-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.contacts-container img {
+    width: 20%;
+    border-radius: 50%;
+}
+
 

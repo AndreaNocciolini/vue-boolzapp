@@ -24,7 +24,7 @@
                 <input type="text" placeholder="Search or start a new chat">
             </div>
             <div v-for="(contact, index) in contacts" class="contacts-container">
-                
+                <img :src="'img/avatar' + contact.avatar + '.jpg'" /> 
                 <h4>{{contact.name}}</h4>
             </div>
         </div>
