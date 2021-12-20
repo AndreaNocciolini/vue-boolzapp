@@ -3,3 +3,29 @@
     padding:0;
     box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(#009587 0, #009587 20%, #d7dad6 20%, #d7dad6 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-fluid{
+    display: flex;
+    width: 80%;
+    height: 95%;
+    background-color: yellow;
+}
+
+.inner-container-sx {
+    width: 30%;
+    height: 100%;
+    background-color: red;
+}
+
+.inner-container-dx {
+    width: 70%;
+    height: 100%;
+}
