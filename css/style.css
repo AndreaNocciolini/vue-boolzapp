@@ -123,6 +123,11 @@ body {
     width: 85%;
     border-radius: 50%;
 }
+
+.contacts-container:hover{
+    cursor: pointer;
+    background-color: #d7dad6;
+}
 /* End Inner Container Sx */
 
 /* Inner Container DX */
