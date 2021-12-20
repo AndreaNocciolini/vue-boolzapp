@@ -15,15 +15,20 @@
 </head>
 <body>
     
-    <div class="container-fluid">
+    <div id="app" class="container-fluid">
         <div class="inner-container-sx">
             <div class="inner-container-header"></div>
             <div class="alert"></div>
             <div class="search">
                 <i class="fas fa-search icon"></i>
-                <input type="text" placeholder="Search...">
+                <input type="text" placeholder="Search or start a new chat">
+            </div>
+            <div v-for="(contact, index) in contacts" class="contacts-container">
+                
+                <h4>{{contact.name}}</h4>
             </div>
         </div>
+
         <div class="inner-container-dx">
             <div class="inner-container-header"></div>
         </div>
