@@ -18,6 +18,10 @@ body {
     height: 95%;
 }
 
+.icon{
+    color: grey;
+}
+
 .icon:hover{
     cursor: pointer;
 }
@@ -71,7 +75,7 @@ body {
     background-color: #8edafc;
 }
 
-.alert-icon{
+.alert-icon .icon{
     border-radius: 50%;
     padding: 0.6em;
     color: #8edafc;
@@ -93,7 +97,6 @@ body {
 }
 
 .search .icon {
-    color: grey;
     margin-left: 0.5em;
 }
 
@@ -137,6 +140,34 @@ body {
     background-color: #e3dbd2;
     border: 1px solid #bfbfbf;
 }
+
+.contact-img {
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.contact-img img{
+    width: 55%;
+    border-radius: 50%;
+}
+
+.contact-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contact-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.8em;
+    width: 20%;
+    font-size: 1.2em;
+}
+
 
 /* End Inner Container DX */
 
