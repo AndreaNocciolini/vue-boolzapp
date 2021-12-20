@@ -19,7 +19,7 @@
         <div class="inner-container-sx">
             <div class="inner-container-header">
                 <div class="user-container">
-                    <img src="img/avatar_1.jpg" alt="">
+                    <img src="img/avatar_5.jpg" alt="">
                     <h4>Nome Utente</h4>
                 </div>
                 <div class="user-menu">
@@ -42,8 +42,12 @@
                 <input type="text" placeholder="Search or start a new chat">
             </div>
             <div v-for="(contact, index) in contacts" class="contacts-container">
-                <img :src="'img/avatar' + contact.avatar + '.jpg'" /> 
-                <h4>{{contact.name}}</h4>
+                <div class="contacts-img-container">
+                    <img :src="'img/avatar' + contact.avatar + '.jpg'" />
+                </div>
+                 <div class="contacts-info">
+                    <h4>{{contact.name}}</h4>
+                 </div>    
             </div>
         </div>
 
