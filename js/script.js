@@ -6,6 +6,7 @@ const app = new Vue(
     {
         el : "#app",
         data : {
+            counter: 0,
             contacts: [
                 {
                   name: "Michele",
@@ -93,5 +94,15 @@ const app = new Vue(
                 },
               ]
         },
+        methods: {
+          getIndex: function(index){
+            
+             console.log(this.counter)
+             return this.counter = index
+          }
+        },
+        created(){
+          console.log(this.contacts[0].messages)
+        }
     }
 )
