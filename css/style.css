@@ -36,6 +36,25 @@ body {
     border-bottom: 1px solid #bfbfbf;
 }
 
+/* Min Height */
+.min-height-35 {
+    min-height: 35PX;
+}
+
+.min-height-50 {
+    min-height: 50px;
+}
+
+.min-height-60{
+    min-height: 60px;
+}
+
+.min-height-200 {
+    min-height: 200px;
+    overflow-y: auto;
+}
+/* End Min Height */
+
 /* Inner Container SX */
 .inner-container-sx {
     width: 30%;
@@ -178,11 +197,19 @@ body {
 }
 
 .message {
+    display: flex;
+    justify-content: space-between;
     width: 60%;
     background-color: white;
     border-radius: 5px;
     margin: 1em 0;
     padding: 0.5em;
+}
+
+.date {
+    font-size: 0.7em;
+    color: gray;
+    font-weight: bold;
 }
 
 .message.sent {

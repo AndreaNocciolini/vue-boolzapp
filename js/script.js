@@ -102,8 +102,10 @@ const app = new Vue(
              return this.counter = index
           },
           getMessage: function() {
-            console.log('ciao')
+            dayjs.extend(window.dayjs_plugin_customParseFormat);
+            let data = dayjs().format("D/M/YYYY HH:mm:ss");
             let obj ={
+              date: data,
               text: this.text,
               status: "sent"
             }
@@ -111,6 +113,7 @@ const app = new Vue(
             this.text = ''
             setTimeout(() => {
               let obj = {
+                date: data,
                 text: "Ok!",
                 status: "received"
               }

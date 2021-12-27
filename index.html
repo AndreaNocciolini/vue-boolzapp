@@ -7,6 +7,10 @@
 
     <!-- Link VueJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Link DayJS -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/plugin/utc.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.20/plugin/customParseFormat.js"></script>
     <!-- Link FontAwsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <!-- Link css -->
@@ -17,8 +21,8 @@
     
     <div id="app" class="container-fluid">
         <!-- Inner Container SX -->
-        <div class="inner-container-sx">
-            <div class="inner-container-header">
+        <div class="inner-container-sx  min-height-200">
+            <div class="inner-container-header  min-height-50">
                 <div class="user-container">
                     <img src="img/avatar_5.jpg" alt="">
                     <h4>User Name</h4>
@@ -29,7 +33,7 @@
                     <i class="fas fa-ellipsis-v icon"></i>
                 </div>
             </div>
-            <div class="alert-container">
+            <div class="alert-container min-height-60">
                 <div class="alert-icon">
                     <i class="far fa-bell-slash icon"></i>
                 </div>
@@ -38,7 +42,7 @@
                     <h5>Enable desktop notifications</h5>
                 </div>
             </div>
-            <div class="search">
+            <div class="search min-height-35">
                 <i class="fas fa-search icon"></i>
                 <input type="text" placeholder="Search or start a new chat">
             </div>
@@ -56,7 +60,7 @@
 
         <!-- Inner Container DX -->
         <div class="inner-container-dx">
-            <div class="inner-container-header">
+            <div class="inner-container-header min-height-50">
                 <div class="contact-img">
                     <img :src="'img/avatar' + contacts[counter].avatar + '.jpg'" />
                 </div>
@@ -71,13 +75,17 @@
                 </div>
             </div>
 
-            <div class="main-dx">
+            <div class="main-dx min-height-200">
                 <div v-for="(message, index) in contacts[counter].messages" class="message" :class="message.status == 'sent' ? 'sent' : ''">
                     {{message.text}}
+                    <div class="date">
+                        {{message.date}}
+                    </div>
                 </div>
+                
             </div>
 
-            <div class="footer-dx">
+            <div class="footer-dx  min-height-50">
                 <i class="far fa-smile icon"></i>
                 <input v-model="text" @keyup.enter="getMessage" type="text" placeholder="Write a message">
                 <i class="fas fa-microphone icon"></i>
@@ -86,6 +94,7 @@
         <!-- Inner Container DX -->
     </div>
 
+    
     <!-- Link js -->
     <script src="js/script.js"></script>
 </body>
