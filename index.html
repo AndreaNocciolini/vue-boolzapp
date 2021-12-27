@@ -44,9 +44,9 @@
             </div>
             <div class="search min-height-35">
                 <i class="fas fa-search icon"></i>
-                <input type="text" placeholder="Search or start a new chat">
+                <input @keyup="searchUsers" v-model="search" type="text" placeholder="Search or start a new chat">
             </div>
-            <div @click="getIndex(index)" v-for="(contact, index) in contacts" class="contacts-container">
+            <div @click="getIndex(index)" v-if="contact.visible == true" v-for="(contact, index) in contacts" class="contacts-container">
                 <div class="contacts-img-container">
                     <img :src="'img/avatar' + contact.avatar + '.jpg'" />
                 </div>

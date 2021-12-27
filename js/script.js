@@ -7,6 +7,7 @@ const app = new Vue(
         el : "#app",
         data : {
             text : '',
+            search: '',
             counter: 0,
             contacts: [
                 {
@@ -116,10 +117,21 @@ const app = new Vue(
                 date: data,
                 text: "Ok!",
                 status: "received"
-              }
+                }
               this.contacts[this.counter].messages.push(obj)
-            }, 2000)
-          }
+              }, 2000)
+            },
+            searchUsers: function(){
+              this.contacts.forEach((element) => {
+                  if (element.name.toLowerCase().includes(this.search.toLowerCase())) {
+                  element.visible = true
+                  }
+                  else {
+                  element.visible = false
+                  }
+                }
+              )    
+            }  
         },
         created(){
           console.log(this.contacts[0].messages)
