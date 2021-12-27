@@ -79,7 +79,7 @@
 
             <div class="footer-dx">
                 <i class="far fa-smile icon"></i>
-                <input type="text" placeholder="Write a message">
+                <input v-model="text" @keyup.enter="getMessage" type="text" placeholder="Write a message">
                 <i class="fas fa-microphone icon"></i>
             </div>
         </div>

@@ -6,6 +6,7 @@ const app = new Vue(
     {
         el : "#app",
         data : {
+            text : '',
             counter: 0,
             contacts: [
                 {
@@ -99,6 +100,22 @@ const app = new Vue(
             
              console.log(this.counter)
              return this.counter = index
+          },
+          getMessage: function() {
+            console.log('ciao')
+            let obj ={
+              text: this.text,
+              status: "sent"
+            }
+            this.contacts[this.counter].messages.push(obj)
+            this.text = ''
+            setTimeout(() => {
+              let obj = {
+                text: "Ok!",
+                status: "received"
+              }
+              this.contacts[this.counter].messages.push(obj)
+            }, 2000)
           }
         },
         created(){
