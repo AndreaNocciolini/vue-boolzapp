@@ -24,7 +24,10 @@ Vue.component('dropdown', {
 	methods: {
 		toggleShow: function() {
 			this.showMenu = !this.showMenu;
-		}
+		},
+    removeMessage: function (index) {
+      console.log(index)
+    }
 	}
 })
 
