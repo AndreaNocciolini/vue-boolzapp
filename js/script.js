@@ -2,34 +2,7 @@
 //A)--Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco) assegnando due classi CSS diverse
 //B)--Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
 
-Vue.component('dropdown', {
-	template: `
-  <div>
-    <i @click='toggleShow' class="fas fa-arrow-down"></i>
-    <div v-if='showMenu' class='menu'>
-				<div class='menu-item'>
-          <div>Informazioni Messaggio</div>
-        </div>
-				<div class='menu-item'>
-          <div @click="removeMessage(index)">Cancella Messaggio</div>
-        </div>
-			</div>
-  </div>
-	`,
-	data: function() {
-		return {
-			showMenu: false
-		}
-	},
-	methods: {
-		toggleShow: function() {
-			this.showMenu = !this.showMenu;
-		},
-    removeMessage: function (index) {
-      console.log(index)
-    }
-	}
-})
+
 
 const app = new Vue(
     {
@@ -160,10 +133,38 @@ const app = new Vue(
                   }
                 }
               )    
-            }  
+            },
+            removeMessage: function (index) {
+              this.contacts[this.counter].messages.splice(index, 1)
+          }  
         },
         created(){
-          console.log(this.contacts[0].messages)
+          Vue.component('dropdown', {
+            template: `
+            <div>
+              <i @click='toggleShow' class="fas fa-arrow-down"></i>
+              <div v-if='showMenu' class='menu'>
+                  <div class='menu-item'>
+                    <div>Informazioni Messaggio</div>
+                  </div>
+                  <div class='menu-item'>
+                    <div @click="$emit('removemessageevent')">Cancella Messaggio</div>
+                  </div>
+                </div>
+            </div>
+            `,
+            data: function() {
+              return {
+                showMenu: false
+              }
+            },
+            methods: {
+              toggleShow: function() {
+                this.showMenu = !this.showMenu;
+              }
+            }
+          })
         }
     }
 )
+

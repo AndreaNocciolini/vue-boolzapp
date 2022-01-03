@@ -80,7 +80,7 @@
                     {{message.text}}
                     <div class="date">
                         {{message.date}}
-                        <dropdown></dropdown>   
+                        <dropdown @removeMessageEvent="removeMessage(index)"></dropdown>   
                     </div>
                 </div>
                 
